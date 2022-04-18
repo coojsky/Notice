@@ -18,5 +18,5 @@ public class SlackDTO{
     private String date;      // 시간
     private String msg;       // 메시지내용
     private int type;         // 메시지종류 
-    private boolean respcd;   // 응답코드
+    //private boolean respcd;   // 응답코드
 }
