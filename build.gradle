@@ -40,7 +40,11 @@ dependencies {
     testCompileOnly 'org.projectlombok:lombok:1.18.12' 
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.12'
     
-    implementation("com.slack.api:slack-api-client:1.21.2")
+    /* slack 
+    implementation 'com.slack.api:slack-api-client:1.15.0'
+    implementation 'com.slack.api:slack-api-model:1.15.0'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.3'
+    */
 	
 	/* Web 
 	compile('org.springframework.boot:spring-boot-starter-data-rest')

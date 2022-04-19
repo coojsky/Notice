@@ -5,11 +5,14 @@ import java.io.IOException;
 import org.springframework.stereotype.Service;
 
 /* 슬랙 */
-import com.slack.api.methods.MethodsClient;
-import com.slack.api.methods.request.chat.ChatPostMessageRequest;
-import com.slack.api.methods.response.chat.ChatPostMessageResponse;
-import com.slack.api.methods.SlackApiException;
-import com.slack.api.Slack;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
 import project.dto.*;
 
@@ -24,37 +27,27 @@ public class SlackService implements NoticeServiceInterface {
         @Override
         public boolean sendmsg(){
             System.out.println("POST SLACK SEND MESSAGE START");
-            System.out.println("Servicenm : " + this.slackdto.getServicenm());
+            /*System.out.println("Servicenm : " + this.slackdto.getServicenm());
             System.out.println("Groupid : "   + this.slackdto.getGroupid());
             System.out.println("Date : "      + this.slackdto.getDate());
             System.out.println("MSG : "       + this.slackdto.getMsg());
             System.out.println("Type : "      + this.slackdto.getType());
-            //System.out.println("Respcd : "      + this.slackdto.getRespcd());
-            System.out.println("POST SLACK SEND MESSAGE END");
+            System.out.println("Respcd : "      + this.slackdto.getRespcd());*/
             
-            // Load an env variable
-            Slack slack = Slack.getInstance();
-            // If the token is a bot token, it starts with `xoxb-` while if it's a user token, it starts with `xoxp-`
-            String token = System.getenv("xoxb-3333536582081-3333616965265-AKCVDjjkrIWvHtL8SGeSbQUd");
-            // Initialize an API Methods client with the given token
-            try{
-                MethodsClient methods = slack.methods(token);
-                
-                // Build a request object
-                ChatPostMessageRequest request = ChatPostMessageRequest.builder()
-                  .channel("C039TG07MDX") // Use a channel ID `C1234567` is preferrable
-                  .text(":wave: Hi from a bot written in Java!")
-                  .build();
-                
-                // Get a response as a Java object
-                ChatPostMessageResponse response = methods.chatPostMessage(request);
-            }catch(IOException e)
-            {
-                e.printStackTrace();
-            }catch(SlackApiException e)
-            {
-                e.printStackTrace();
-            }
+            
+            RestTemplate restTemplate = new RestTemplate();
+
+            Map<String,Object> request = new HashMap<String,Object>();
+            request.put("username", this.slackdto.getServicenm());
+            request.put("text", this.slackdto.getMsg());
+    
+            HttpEntity<Map<String,Object>> entity = new HttpEntity<Map<String,Object>>(request);
+        	// Webhook URL
+            String url = "https://hooks.slack.com/services/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";; 
+    
+            restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
+            
+            System.out.println("POST SLACK SEND MESSAGE END");
             
             return true;
         }
