@@ -25,9 +25,11 @@ public class NoticeController {
     }
     
     @RequestMapping(value = "/v1/telegram", method = RequestMethod.POST) 
-    public String telegram_sendmsg(){ 
-        System.out.println("POST TEST");
-        return "TELEGRAM POST"; 
+    @ResponseBody
+    public TelegramDTO telegram_sendmsg(@RequestBody TelegramDTO telegramdto){ 
+        NoticeServiceInterface noticeservice = new TelegramService(telegramdto);
+        System.out.println("결과값 : " + noticeservice.sendmsg());
+        return telegramdto; 
     }
     
     @RequestMapping(value = "/v1/slack", method = RequestMethod.GET) 
