@@ -17,3 +17,12 @@ curl -X POST -H "User-Agent: linux bla bla" -H "Content-Type: application/json" 
 \"msg\":\"We-Check 장애 발생\",\
 \"type\":\"1\"\
 }" localhost:8080/v1/telegram
+
+
+# 이메일 테스트
+curl -X POST -H "User-Agent: linux bla bla" -H "Content-Type: application/json" -d " \
+{\
+\"address\":\"cooj_sky@naver.com\",\
+\"title\":\"WE-CHECK\",\
+\"message\":\"We-Check 장애 발생\"\
+}" localhost:8080/v1/email

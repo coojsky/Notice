@@ -44,9 +44,12 @@ public class TelegramService implements NoticeServiceInterface {
             HttpEntity<Map<String,Object>> entity = new HttpEntity<Map<String,Object>>(request);
         	// Webhook URL
             String url = "https://api.telegram.org/bot5215339582:AAFMEzJZJrAkZ6yeJ-FXP5zI94DT5B5X-fk/sendMessage";; 
-    
             restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
+            /*
+            ResponseEntity<Map> response = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
             
+            System.out.println("response : " + response);
+            */
             System.out.println("POST TELEGRAM SEND MESSAGE END");
             
             return true;

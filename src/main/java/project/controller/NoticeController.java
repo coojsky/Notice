@@ -45,6 +45,14 @@ public class NoticeController {
         System.out.println("결과값 : " + noticeservice.sendmsg());
         return slackdto; 
     }
+    
+    @RequestMapping(value = "/v1/email", method = RequestMethod.POST) 
+    @ResponseBody
+    public SmtpDTO slack_sendmsg(@RequestBody SmtpDTO smtpdto){ 
+        NoticeServiceInterface noticeservice = new SmtpService(smtpdto);
+        System.out.println("결과값 : " + noticeservice.sendmsg());
+        return smtpdto; 
+    }
 }
 
 
