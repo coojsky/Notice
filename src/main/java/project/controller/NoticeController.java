@@ -11,7 +11,6 @@ import project.dto.*;
 
 @RestController 
 public class NoticeController { 
-    
     @RequestMapping(value = "/", method = RequestMethod.GET) 
     public String test(){ 
         System.out.println("Hello");
@@ -48,9 +47,9 @@ public class NoticeController {
     
     @RequestMapping(value = "/v1/email", method = RequestMethod.POST) 
     @ResponseBody
-    public SmtpDTO slack_sendmsg(@RequestBody SmtpDTO smtpdto){ 
-        NoticeServiceInterface noticeservice = new SmtpService(smtpdto);
-        System.out.println("결과값 : " + noticeservice.sendmsg());
+    public SmtpDTO smtp_sendmsg(@RequestBody SmtpDTO smtpdto){ 
+        /*NoticeServiceInterface noticeservice = new SmtpService(smtpdto);
+        System.out.println("결과값 : " + noticeservice.sendmsg());*/
         return smtpdto; 
     }
 }

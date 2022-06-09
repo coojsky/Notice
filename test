@@ -1,20 +1,20 @@
 # 슬랙 테스트
 curl -X POST -H "User-Agent: linux bla bla" -H "Content-Type: application/json" -d " \
 {\
-\"servicenm\":\"법인카드\",\
+\"servicenm\":\"알림봇\",\
 \"groupid\":\"100001\",\
-\"date\":\"20220419154300\",\
-\"msg\":\"법인카드 모니터링 테스트 입니다.\",\
+\"date\":\"20220512223000\",\
+\"msg\":\"알림 봇 서비스 테스트\",\
 \"type\":\"1\"\
 }" localhost:8080/v1/slack
 
 # 텔레그램 테스트
 curl -X POST -H "User-Agent: linux bla bla" -H "Content-Type: application/json" -d " \
 {\
-\"servicenm\":\"Wecheck\",\
+\"servicenm\":\"알림봇\",\
 \"groupid\":\"100001\",\
-\"date\":\"20220419154300\",\
-\"msg\":\"We-Check 장애 발생\",\
+\"date\":\"20220512223000\",\
+\"msg\":\"알림 봇 서비스 테스트\",\
 \"type\":\"1\"\
 }" localhost:8080/v1/telegram
 
