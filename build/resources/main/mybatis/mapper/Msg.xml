@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="project.repository.KkoRepository">
+
+    <resultMap id="Button" type="Button">
+        <result property="action" column="b_action"></result>
+		<result property="label" column="b_label"></result>
+		<result property="messageText" column="b_messageText"></result>
+		<result property="webLinkUrl" column="b_webLinkUrl"></result>
+    </resultMap>
+	
+	<resultMap id="Social" type="Social">
+        <result property="like" column="s_like"></result>
+        <result property="comment" column="s_comment"></result>
+        <result property="share" column="s_share"></result>
+    </resultMap>
+	
+	<resultMap id="Profile" type="Profile">
+        <result property="imageUrl" column="p_imageUrl"></result>
+		<result property="nickname" column="p_nickname"></result>
+    </resultMap>
+	
+	<resultMap id="Thumbnail" type="Thumbnail">
+        <result property="imageUrl" column="t_imageUrl"></result>
+		<result property="link" column="t_link"></result>
+		<result property="fixedRatio" column="t_fixedRatio"></result>
+		<result property="width" column="t_width"></result>
+		<result property="height" column="t_height"></result>
+    </resultMap>
+    
+    <resultMap id="BasicCard" type="BasicCard">
+        <result property="title" column="title"></result>
+        <result property="description" column="description"></result>
+		<association property="thumbnail" resultMap="Thumbnail"></association>
+		<association property="profile" resultMap="Profile"></association>
+		<association property="social" resultMap="Social"></association>
+		<collection property="buttons" resultMap="Button"></collection>
+    </resultMap>
+	
+	<resultMap id="ch_Thumbnail" type="Thumbnail">
+        <result property="imageUrl" column="ct_imageUrl"></result>
+		<result property="link" column="ct_link"></result>
+		<result property="fixedRatio" column="ct_fixedRatio"></result>
+		<result property="width" column="ct_width"></result>
+		<result property="height" column="ct_height"></result>
+    </resultMap>
+	
+	<resultMap id="ch_Header" type="Header">
+        <result property="title" column="ch_title"></result>
+        <result property="description" column="ch_description"></result>
+		<association property="thumbnail" resultMap="ch_Thumbnail"></association>
+    </resultMap>
+	
+	<resultMap id="Carousel" type="Carousel">
+        <result property="type" column="c_type"></result>
+		<association property="header" resultMap="ch_Header"></association>
+		<association property="items" resultMap="BasicCard"></association>
+    </resultMap>
+	
+	
+	
+	 <!-- 버튼 저장/갱신 -->
+    <insert id="Thumbnail_Insert" parameterType="Thumbnail">
+        INSERT INTO THUMBNAIL_TABLE VALUES 
+		(
+              #{fk_tran_no}
+            , #{url}
+        )
+    </insert>
+	<update id="Thumbnail_Update" parameterType="Thumbnail">
+        UPDATE THUMBNAIL_TABLE 
+		SET THUMBNAIL_IMAGEURL = #{url}
+        WHERE FK_TRAN_NO = #{fk_tran_no}
+    </update>
+	
+	<update id="Main_Update" parameterType="BasicCard">
+        UPDATE MAIN_TABLE
+		SET ANSWER_DESCRIPTION  = #{msg}
+		WHERE QUESTION = #{question}
+    </update>
+	
+	<select id="selectType" resultType="String">
+        SELECT A.ANSWER_TYPE as type
+	 	FROM MAIN_TABLE A
+		WHERE 1=1
+		      AND A.QUESTION = #{question}
+    </select>
+	
+</mapper>

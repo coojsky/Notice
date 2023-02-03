@@ -1,0 +1,3038 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.1.RELEASE)
+
+2022-10-16 14:02:15.817  INFO 1710 --- [           main] project.Application                      : Starting Application on goorm with PID 1710 (/workspace/notice/build/libs/notice-0.0.1.jar started by root in /workspace/notice)
+2022-10-16 14:02:15.821  INFO 1710 --- [           main] project.Application                      : No active profile set, falling back to default profiles: default
+2022-10-16 14:02:16.103  INFO 1710 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27abe2cd: startup date [Sun Oct 16 14:02:16 UTC 2022]; root of context hierarchy
+2022-10-16 14:02:20.308  INFO 1710 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5ee3fcf2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-16 14:02:20.983  INFO 1710 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-16 14:02:21.017  INFO 1710 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-16 14:02:21.017  INFO 1710 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2022-10-16 14:02:21.032  INFO 1710 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2022-10-16 14:02:21.230  INFO 1710 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-16 14:02:21.230  INFO 1710 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5137 ms
+2022-10-16 14:02:21.609  INFO 1710 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2022-10-16 14:02:21.613  INFO 1710 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-10-16 14:02:21.614  INFO 1710 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-10-16 14:02:21.614  INFO 1710 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2022-10-16 14:02:21.614  INFO 1710 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2022-10-16 14:02:22.324  INFO 1710 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-16 14:02:22.871  INFO 1710 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-16 14:02:22.933  INFO 1710 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-10-16 14:02:23.011  INFO 1710 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-10-16 14:02:23.291  INFO 1710 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2022-10-16 14:02:23.293  INFO 1710 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-10-16 14:02:23.399  INFO 1710 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2022-10-16 14:02:23.817  INFO 1710 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-10-16 14:02:24.155  INFO 1710 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-16 14:02:25.284  INFO 1710 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-10-16 14:02:26.177  INFO 1710 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27abe2cd: startup date [Sun Oct 16 14:02:16 UTC 2022]; root of context hierarchy
+2022-10-16 14:02:26.291  WARN 1710 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-16 14:02:26.497  INFO 1710 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/telegram],methods=[GET]}" onto public java.lang.String project.controller.NoticeController.telegram_status()
+2022-10-16 14:02:26.502  INFO 1710 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/telegram],methods=[POST]}" onto public project.dto.TelegramDTO project.controller.NoticeController.telegram_sendmsg(project.dto.TelegramDTO)
+2022-10-16 14:02:26.503  INFO 1710 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/slack],methods=[GET]}" onto public java.lang.String project.controller.NoticeController.slack_status()
+2022-10-16 14:02:26.503  INFO 1710 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/slack],methods=[POST]}" onto public project.dto.SlackDTO project.controller.NoticeController.slack_sendmsg(project.dto.SlackDTO)
+2022-10-16 14:02:26.504  INFO 1710 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/email],methods=[POST]}" onto public project.dto.SmtpDTO project.controller.NoticeController.smtp_sendmsg(project.dto.SmtpDTO)
+2022-10-16 14:02:26.509  INFO 1710 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kkoChat/v1],methods=[POST || GET],produces=[application/json]}" onto public java.lang.String project.controller.NoticeController.callAPI(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2022-10-16 14:02:26.509  INFO 1710 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String project.controller.NoticeController.test()
+2022-10-16 14:02:26.576  INFO 1710 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2022-10-16 14:02:26.577  INFO 1710 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2022-10-16 14:02:26.687  INFO 1710 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-10-16 14:02:26.688  INFO 1710 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-10-16 14:02:26.882  INFO 1710 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-10-16 14:02:27.615  INFO 1710 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2022-10-16 14:02:27.617  INFO 1710 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2022-10-16 14:02:27.675  INFO 1710 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2022-10-16 14:02:27.799  INFO 1710 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-16 14:02:27.808  INFO 1710 --- [           main] project.Application                      : Started Application in 13.085 seconds (JVM running for 14.215)
+스프링 버전 : 5.0.5.RELEASE
+2022-10-16 14:02:37.293  INFO 1710 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2022-10-16 14:02:37.293  INFO 1710 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2022-10-16 14:02:37.316  INFO 1710 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 23 ms
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"ㅇㅇㅇ","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : null
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"테스트","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : null
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"허락완료","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "준비하기",
+        "description" : "갑작스러운 외박으로 준비가 필요합니다.\n\n호캉스를 재밌게 진행하기 위해\n사전 준비를 진행해주세요.\n\n사전 준비를 위해 30분 드리겠습니다.\n30분 안에 출발 준비를 시작해주세요.\n\n완료 후 준비 완료 버튼을 눌러주세요.\n\n※ 주의사항\n시간 초과시 맛없는 저녁으로 변경\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de339e41ce89b663315d96faecd7cfd11b"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb10a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 2,
+          "comment" : 2,
+          "share" : 2
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "준비완료",
+          "messageText" : "준비완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"준비완료","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "이동하기",
+        "description" : "지금부터는 호캉스를 진행하기 위해\n총 6개의 미션이 준비되어있습니다.\n\n성공적으로 미션을 마칠 수 있도록\n최선을 다해주시기 바랍니다.\n\n미션의 위치 확인을 위해서\n위치확인 버튼을 눌러주세요.\n\n※ 주의사항\n예상시간인 16시가 넘었다면,\n서둘러서 진행해주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de9cbcbe2de7f4969efc79ab353e0c19e8"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb11a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 3,
+          "comment" : 3,
+          "share" : 3
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "위치확인",
+          "messageText" : "위치확인",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"시작","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "허락받기",
+        "description" : "오늘은 6주년을 축하하는 의미로\n호캉스 진행 예정으로 부모님의\n허락이 필요합니다.\n\n엄마에게 허락을 받아주세요.\n\n성공 후 허락완료 버튼을 눌러주세요.\n\n※ 주의사항\n미션 실패시 이벤트 종료\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 1238,
+          "comment" : 8,
+          "share" : 780
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "허락완료",
+          "messageText" : "허락완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"허락완료","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "준비하기",
+        "description" : "갑작스러운 외박으로 준비가 필요합니다.\n\n호캉스를 재밌게 진행하기 위해\n사전 준비를 진행해주세요.\n\n사전 준비를 위해 30분 드리겠습니다.\n30분 안에 출발 준비를 시작해주세요.\n\n완료 후 준비 완료 버튼을 눌러주세요.\n\n※ 주의사항\n시간 초과시 맛없는 저녁으로 변경\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de339e41ce89b663315d96faecd7cfd11b"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb10a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 2,
+          "comment" : 2,
+          "share" : 2
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "준비완료",
+          "messageText" : "준비완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"준비완료","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "이동하기",
+        "description" : "지금부터는 호캉스를 진행하기 위해\n총 6개의 미션이 준비되어있습니다.\n\n성공적으로 미션을 마칠 수 있도록\n최선을 다해주시기 바랍니다.\n\n미션의 위치 확인을 위해서\n위치확인 버튼을 눌러주세요.\n\n※ 주의사항\n예상시간인 16시가 넘었다면,\n서둘러서 진행해주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de9cbcbe2de7f4969efc79ab353e0c19e8"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb11a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 3,
+          "comment" : 3,
+          "share" : 3
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "위치확인",
+          "messageText" : "위치확인",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"위치확인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "석계역 6호선 물품보관함",
+        "description" : "2, 3번 출구에 물품보관함 속 미션에\n필요한 아이템이 숨겨져 있습니다.\n\n문제를 해결을 통해 사물함 번호 및\n비밀번호를 알아내어 물건을 획득하세요.\n\n도착하였다면 문제확인을 눌러주세요.\n\n※ 주의사항\n환승을 위해서는 버스를 이용하세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTRfMTQg/MDAxNjY1NzQ5MzgyMjI0.aLUILeB0CG0oO5VG2MOKCH_gQAf3Td9ucpKvUHiDVt0g.EYfbKFksZA8QBjve7uKHLwQnma15NtgX0k6ji_Y6z_Eg.PNG/%EC%84%9D%EA%B3%84%EC%97%AD.PNG?type=m250_375"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb12a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 4,
+          "comment" : 4,
+          "share" : 4
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "문제확인",
+          "messageText" : "문제확인",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"문제확인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "노트북의 패스워드가 뭘까?",
+        "description" : "노트북이 비밀번호로 잠겼습니다.\n이미지에 나와있는 노트북 힌트를\n유추하여 비밀번호를 해결해보세요.\n\n답을 알았다면 답을 입력해주세요.\n\n※ 주의사항\n힌트가 필요한 경우에는\n아래 버튼을 눌러주세요.\n\n",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTRfNzAg/MDAxNjY1NzQ5MjMzNTgx.Xrg2L3wEtga_VO9OXZS7rvWH4uQTHH8vueqJHawm6Kog.OeP2tpaOkyv9IB7Qcq_aoEbqgHEQhwzrhlUQg0frCU0g.PNG/%EB%AC%B8%EC%A0%9C1.png?type=m250_375"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb13a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 5,
+          "comment" : 5,
+          "share" : 5
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "힌트",
+          "messageText" : "노트북힌트",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"노트북힌트","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "노트북 힌트",
+        "description" : "키보드의 키패드가 있습니다.\n버튼의 공백을 떠올리며\n비밀번호를 유추해보세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTZfMTEy/MDAxNjY1ODkyMDY2Mjgw.dFm-X4TEuaNt-BTLqZwyM5n_GQ36T_GaJzSItNx8fCkg.6eBZU2AphpTychNNjfqDn7I7dwhu7nALuSTto_hwhU0g.PNG/%ED%9E%8C%ED%8A%B81.png?type=m250_375"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb14a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 6,
+          "comment" : 6,
+          "share" : 6
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"161112","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "정답",
+        "description" : "물품보관함의 위치는 OOO번\n패스워드는 OOOOOO입니다.\n\n패스워드를 입력하여 물건을\n획득해주세요.\n\n획득 후 물건획득을 눌러주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de41d1a2caccd0c566eab28b91e2e5d306"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb15a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 7,
+          "comment" : 7,
+          "share" : 7
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "물건획득",
+          "messageText" : "물건획득",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"물건획득","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "지하철탑승",
+        "description" : "다음 미션 진행을 위해서 1호선\n지하철을 탑승해주세요. (하행)\n\n이제는 목적지를 알아야겠죠 ?\n목적지를 확인하기 위해서는\n\n퀴즈를 해결해야 한답니다!\n목적지확인 버튼을 통해 퀴즈를\n풀고 목적지를 알아내세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de8f324a0b9c48f77dbce3a43bd11ce785"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb16a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 8,
+          "comment" : 8,
+          "share" : 8
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "목적지확인",
+          "messageText" : "목적지확인",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"목적지확인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "목적지 퀴즈",
+        "description" : "최근 코로나로 인해서 3년동안 진행하지\n못했던 큰 축제를 진행하는 위치입니다.\n\n10월 8일 축제를 보기 위해 내린 역의\n위치는 어디인지 맞춰보세요.\n\n정답을 입력해주세요.\n\n정답을 못찾으시겠다면, 강 건너기 전\n1호선의 모든역을 입력하세요..…!\n\n※ 주의사항\n탑승 후 15분까지 못맞췄다면\n모든 역을 입력하세요.\n(역은 생략 광운대역인 경우 광운대)\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de00df9b2a481d32ec42ae698738782a76"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb17a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 9,
+          "comment" : 9,
+          "share" : 9
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"용산","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "정답",
+        "description" : "\n목적지에 도착하기 전에 잠시\n쉬는시간을 갖도록하겠습니다.\n\n도착 후 목적지도착을 눌러주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418deb3a18fdf58bc66ec3f4b6084b7d0b570"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb18a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 10,
+          "comment" : 10,
+          "share" : 10
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "목적지도착",
+          "messageText" : "목적지도착",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"목적지도착","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "물품구매",
+        "description" : "여기까지 성공하다니 대단한걸요 ?\n\n이번 미션은 호캉스를 재미있게 즐기기\n위해서 물품을 구매해야 합니다.!\n\n아래 내용을 유추하여 호캉스의\n분위기를 낼 수 있는 물건을 맞추세요.\n\n1. 조양마트\n2. 광명동굴\n3. 형제조각\n\n정답을 입력해주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de7e6f47a71c79378b48860ead6a12bf11"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb19a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 11,
+          "comment" : 11,
+          "share" : 11
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"와인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "정답",
+        "description" : "물품보관함에서 획득한 카드를\n활용하여 와인을 구매해주세요.\n\n근처 와인 판매점의 위치는\n1. 용산역 지하 이마트\n2. 용산역 건너편 오비노미오\n3. 용산역 건너편 와인마트\n\n가까운 순서대로 나열하였습니다.\n좋아하는 와인을 선택하고 난 후\n구매완료를 눌러주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de71b950f0a05bd8dba8b11dbe535ebe4b"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb20a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 12,
+          "comment" : 12,
+          "share" : 12
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "구매완료",
+          "messageText" : "구매완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"구매완료","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "열쇠를 획득하라",
+        "description" : "드디어 마지막 퀴즈에 도달하였어요.!\n\n우리의 첫 호캉스를 위해 열쇠를\n획득을 통해 입장이 가능합니다.\n\n열쇠 획득 장소를 알아내기 위해서\n열쇠위치를 눌러주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de00df9b2a481d32ec42ae698738782a76"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb21a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 13,
+          "comment" : 13,
+          "share" : 13
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "열쇠위치",
+          "messageText" : "열쇠위치",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"열쇠위치","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "열쇠의 위치",
+        "description" : "용산역 2번 출구 물품보관함에\n몰래 숨겨놓았습니다.\n\n물품보관함을 열기 위해서는\n퀴즈 해결이 필요합니다.\n\n퀴즈 확인을 위해서 위치확인\n버튼을 눌러주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTRfMjYw/MDAxNjY1NzQ5NjA1MzI3.hxrwJSZeUkvOrnwout_dt-ZoJncSYz0FNFtXzeyf_wYg.XBchhZbS-QBY7cG4DNbUeHSxwdOjpWm-_ngWGYvh68Ag.PNG/%EC%9A%A9%EC%82%B0%EC%97%AD.PNG?type=m250_375"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb22a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 14,
+          "comment" : 14,
+          "share" : 14
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "퀴즈",
+          "messageText" : "용산역퀴즈",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"용산역퀴즈","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "색깔 맞추기 퀴즈",
+        "description" : "위 이미지의 퀴즈를 해결하고\n열쇠를 획득하라!\n\n퀴즈를 해결한다면 물품보관함의\n사물함 번호 및 패스워드 공개\n\n정답을 입력해주세요.\n\n※ 주의사항\n힌트가 필요한 경우에는\n아래 버튼을 눌러주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTRfMTAz/MDAxNjY1NzQ5MjQ5Mjg1.bqj8nZZc_2dNLfk4d_A4zr50bWO9bsJidbbWmX3-y90g.6mqrn2op0RAGXT0KO4TCi4nw12TtbCUQTidBPaucI48g.PNG/%EB%AC%B8%EC%A0%9C2.png?type=m250_375"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb23a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 15,
+          "comment" : 15,
+          "share" : 15
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "힌트",
+          "messageText" : "용산역힌트",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"용산역힌트","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "무슨색 일까요?",
+        "description" : "현재는 2022년입니다.\n도화지에서는 6년을 입력했다고\n하였는데 왜 안보일까요 ?\n\n안보이는 색은 과연 ??!\n(빨간색인경우 빨간색 모두 입력)\n",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTZfMTcy/MDAxNjY1ODkyMDczNTUx.SPn-PfOGAuzwzEShNlbXtMmkWKYPVzN1Zbho4DaJgjAg.EsEI5VKcXgmCXAQiKdyUtQiWMF_F9gyMarIlUb0vaIIg.PNG/%ED%9E%8C%ED%8A%B82.png?type=m250_375"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb24a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 16,
+          "comment" : 16,
+          "share" : 16
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"투명색","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "정답",
+        "description" : "물품보관함의 위치는 OOO번\n패스워드는 OOOOOO입니다.\n\n패스워드를 입력하여 물건을\n획득해주세요.\n\n획득 한 물건의 정보를 확인하여\n해당 위치로 이동해주세요.\n\n물품 획득 후 물품획득\n버튼을 눌러주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418deb3a18fdf58bc66ec3f4b6084b7d0b570"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb25a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 17,
+          "comment" : 17,
+          "share" : 17
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "미션클리어",
+          "messageText" : "미션클리어",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"미션클리어","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "미션클리어",
+        "description" : "모든 미션을 해결하였습니다.\n최종 목적지인 노보텔 스위트 앰배서더\n서울 용산으로 이동하여 방으로\n입장해주세요.\n\n지금까지\n6주년 이벤트 담당자\n빵빵덕이였습니다.\n\n6주년 이벤트를 참여해주셔서\n진심으로 감사드리고,\n행복한 6주년 보내세요\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418defba8e3d30017c7399e19e508ee32200a"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb26a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 18,
+          "comment" : 18,
+          "share" : 18
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"시작","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "허락받기",
+        "description" : "오늘은 6주년을 축하하는 의미로\n호캉스 진행 예정으로 부모님의\n허락이 필요합니다.\n\n엄마에게 허락을 받아주세요.\n\n성공 후 허락완료 버튼을 눌러주세요.\n\n※ 주의사항\n미션 실패시 이벤트 종료\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 1238,
+          "comment" : 8,
+          "share" : 780
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "허락완료",
+          "messageText" : "허락완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"허락완료","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "준비하기",
+        "description" : "갑작스러운 외박으로 준비가 필요합니다.\n\n호캉스를 재밌게 진행하기 위해\n사전 준비를 진행해주세요.\n\n사전 준비를 위해 30분 드리겠습니다.\n30분 안에 출발 준비를 시작해주세요.\n\n완료 후 준비 완료 버튼을 눌러주세요.\n\n※ 주의사항\n시간 초과시 맛없는 저녁으로 변경\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de339e41ce89b663315d96faecd7cfd11b"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb10a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 2,
+          "comment" : 2,
+          "share" : 2
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "준비완료",
+          "messageText" : "준비완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"준비완료","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "이동하기",
+        "description" : "지금부터는 호캉스를 진행하기 위해\n총 6개의 미션이 준비되어있습니다.\n\n성공적으로 미션을 마칠 수 있도록\n최선을 다해주시기 바랍니다.\n\n미션의 위치 확인을 위해서\n위치확인 버튼을 눌러주세요.\n\n※ 주의사항\n예상시간인 16시가 넘었다면,\n서둘러서 진행해주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de9cbcbe2de7f4969efc79ab353e0c19e8"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb11a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 3,
+          "comment" : 3,
+          "share" : 3
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "위치확인",
+          "messageText" : "위치확인",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"위치확인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "석계역 6호선 물품보관함",
+        "description" : "2, 3번 출구에 물품보관함 속 미션에\n필요한 아이템이 숨겨져 있습니다.\n\n문제를 해결을 통해 사물함 번호 및\n비밀번호를 알아내어 물건을 획득하세요.\n\n도착하였다면 문제확인을 눌러주세요.\n\n※ 주의사항\n환승을 위해서는 버스를 이용하세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTRfMTQg/MDAxNjY1NzQ5MzgyMjI0.aLUILeB0CG0oO5VG2MOKCH_gQAf3Td9ucpKvUHiDVt0g.EYfbKFksZA8QBjve7uKHLwQnma15NtgX0k6ji_Y6z_Eg.PNG/%EC%84%9D%EA%B3%84%EC%97%AD.PNG?type=m250_375"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb12a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 4,
+          "comment" : 4,
+          "share" : 4
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "문제확인",
+          "messageText" : "문제확인",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"문제확인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "노트북의 패스워드가 뭘까?",
+        "description" : "노트북이 비밀번호로 잠겼습니다.\n이미지에 나와있는 노트북 힌트를\n유추하여 비밀번호를 해결해보세요.\n\n답을 알았다면 답을 입력해주세요.\n\n※ 주의사항\n힌트가 필요한 경우에는\n아래 버튼을 눌러주세요.\n\n",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTRfNzAg/MDAxNjY1NzQ5MjMzNTgx.Xrg2L3wEtga_VO9OXZS7rvWH4uQTHH8vueqJHawm6Kog.OeP2tpaOkyv9IB7Qcq_aoEbqgHEQhwzrhlUQg0frCU0g.PNG/%EB%AC%B8%EC%A0%9C1.png?type=m250_375"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb13a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 5,
+          "comment" : 5,
+          "share" : 5
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "힌트",
+          "messageText" : "노트북힌트",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"노트북힌트","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "노트북 힌트",
+        "description" : "키보드의 키패드가 있습니다.\n버튼의 공백을 떠올리며\n비밀번호를 유추해보세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTZfMTEy/MDAxNjY1ODkyMDY2Mjgw.dFm-X4TEuaNt-BTLqZwyM5n_GQ36T_GaJzSItNx8fCkg.6eBZU2AphpTychNNjfqDn7I7dwhu7nALuSTto_hwhU0g.PNG/%ED%9E%8C%ED%8A%B81.png?type=m250_375"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb14a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 6,
+          "comment" : 6,
+          "share" : 6
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"161112","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "정답",
+        "description" : "물품보관함의 위치는 OOO번\n패스워드는 OOOOOO입니다.\n\n패스워드를 입력하여 물건을\n획득해주세요.\n\n획득 후 물건획득을 눌러주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de41d1a2caccd0c566eab28b91e2e5d306"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb15a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 7,
+          "comment" : 7,
+          "share" : 7
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "물건획득",
+          "messageText" : "물건획득",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"물건획득","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "지하철탑승",
+        "description" : "다음 미션 진행을 위해서 1호선\n지하철을 탑승해주세요. (하행)\n\n이제는 목적지를 알아야겠죠 ?\n목적지를 확인하기 위해서는\n\n퀴즈를 해결해야 한답니다!\n목적지확인 버튼을 통해 퀴즈를\n풀고 목적지를 알아내세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de8f324a0b9c48f77dbce3a43bd11ce785"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb16a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 8,
+          "comment" : 8,
+          "share" : 8
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "목적지확인",
+          "messageText" : "목적지확인",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"목적지확인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "목적지 퀴즈",
+        "description" : "최근 코로나로 인해서 3년동안 진행하지\n못했던 큰 축제를 진행하는 위치입니다.\n\n10월 8일 축제를 보기 위해 내린 역의\n위치는 어디인지 맞춰보세요.\n\n정답을 입력해주세요.\n\n정답을 못찾으시겠다면, 강 건너기 전\n1호선의 모든역을 입력하세요..…!\n\n※ 주의사항\n탑승 후 15분까지 못맞췄다면\n모든 역을 입력하세요.\n(역은 생략 광운대역인 경우 광운대)\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de00df9b2a481d32ec42ae698738782a76"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb17a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 9,
+          "comment" : 9,
+          "share" : 9
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"용산","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "정답",
+        "description" : "\n목적지에 도착하기 전에 잠시\n쉬는시간을 갖도록하겠습니다.\n\n도착 후 목적지도착을 눌러주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418deb3a18fdf58bc66ec3f4b6084b7d0b570"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb18a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 10,
+          "comment" : 10,
+          "share" : 10
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "목적지도착",
+          "messageText" : "목적지도착",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"목적지도착","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "물품구매",
+        "description" : "여기까지 성공하다니 대단한걸요 ?\n\n이번 미션은 호캉스를 재미있게 즐기기\n위해서 물품을 구매해야 합니다.!\n\n아래 내용을 유추하여 호캉스의\n분위기를 낼 수 있는 물건을 맞추세요.\n\n1. 조양마트\n2. 광명동굴\n3. 형제조각\n\n정답을 입력해주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de7e6f47a71c79378b48860ead6a12bf11"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb19a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 11,
+          "comment" : 11,
+          "share" : 11
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"와인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "정답",
+        "description" : "물품보관함에서 획득한 카드를\n활용하여 와인을 구매해주세요.\n\n근처 와인 판매점의 위치는\n1. 용산역 지하 이마트\n2. 용산역 건너편 오비노미오\n3. 용산역 건너편 와인마트\n\n가까운 순서대로 나열하였습니다.\n좋아하는 와인을 선택하고 난 후\n구매완료를 눌러주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de71b950f0a05bd8dba8b11dbe535ebe4b"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb20a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 12,
+          "comment" : 12,
+          "share" : 12
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "구매완료",
+          "messageText" : "구매완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"구매완료","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "열쇠를 획득하라",
+        "description" : "드디어 마지막 퀴즈에 도달하였어요.!\n\n우리의 첫 호캉스를 위해 열쇠를\n획득을 통해 입장이 가능합니다.\n\n열쇠 획득 장소를 알아내기 위해서\n열쇠위치를 눌러주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de00df9b2a481d32ec42ae698738782a76"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb21a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 13,
+          "comment" : 13,
+          "share" : 13
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "열쇠위치",
+          "messageText" : "열쇠위치",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"열쇠위치","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "열쇠의 위치",
+        "description" : "용산역 2번 출구 물품보관함에\n몰래 숨겨놓았습니다.\n\n물품보관함을 열기 위해서는\n퀴즈 해결이 필요합니다.\n\n퀴즈 확인을 위해서 위치확인\n버튼을 눌러주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTRfMjYw/MDAxNjY1NzQ5NjA1MzI3.hxrwJSZeUkvOrnwout_dt-ZoJncSYz0FNFtXzeyf_wYg.XBchhZbS-QBY7cG4DNbUeHSxwdOjpWm-_ngWGYvh68Ag.PNG/%EC%9A%A9%EC%82%B0%EC%97%AD.PNG?type=m250_375"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb22a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 14,
+          "comment" : 14,
+          "share" : 14
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "퀴즈",
+          "messageText" : "용산역퀴즈",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"용산역퀴즈","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "색깔 맞추기 퀴즈",
+        "description" : "위 이미지의 퀴즈를 해결하고\n열쇠를 획득하라!\n\n퀴즈를 해결한다면 물품보관함의\n사물함 번호 및 패스워드 공개\n\n정답을 입력해주세요.\n\n※ 주의사항\n힌트가 필요한 경우에는\n아래 버튼을 눌러주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTRfMTAz/MDAxNjY1NzQ5MjQ5Mjg1.bqj8nZZc_2dNLfk4d_A4zr50bWO9bsJidbbWmX3-y90g.6mqrn2op0RAGXT0KO4TCi4nw12TtbCUQTidBPaucI48g.PNG/%EB%AC%B8%EC%A0%9C2.png?type=m250_375"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb23a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 15,
+          "comment" : 15,
+          "share" : 15
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "힌트",
+          "messageText" : "용산역힌트",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"용산역힌트","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "무슨색 일까요?",
+        "description" : "현재는 2022년입니다.\n도화지에서는 6년을 입력했다고\n하였는데 왜 안보일까요 ?\n\n안보이는 색은 과연 ??!\n(빨간색인경우 빨간색 모두 입력)\n",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTZfMTcy/MDAxNjY1ODkyMDczNTUx.SPn-PfOGAuzwzEShNlbXtMmkWKYPVzN1Zbho4DaJgjAg.EsEI5VKcXgmCXAQiKdyUtQiWMF_F9gyMarIlUb0vaIIg.PNG/%ED%9E%8C%ED%8A%B82.png?type=m250_375"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb24a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 16,
+          "comment" : 16,
+          "share" : 16
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"투명색","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "정답",
+        "description" : "물품보관함의 위치는 OOO번\n패스워드는 OOOOOO입니다.\n\n패스워드를 입력하여 물건을\n획득해주세요.\n\n획득 한 물건의 정보를 확인하여\n해당 위치로 이동해주세요.\n\n물품 획득 후 물품획득\n버튼을 눌러주세요.\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418deb3a18fdf58bc66ec3f4b6084b7d0b570"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb25a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 17,
+          "comment" : 17,
+          "share" : 17
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "미션클리어",
+          "messageText" : "미션클리어",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"미션클리어","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "미션클리어",
+        "description" : "모든 미션을 해결하였습니다.\n최종 목적지인 노보텔 스위트 앰배서더\n서울 용산으로 이동하여 방으로\n입장해주세요.\n\n지금까지\n6주년 이벤트 담당자\n빵빵덕이였습니다.\n\n6주년 이벤트를 참여해주셔서\n진심으로 감사드리고,\n행복한 6주년 보내세요\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418defba8e3d30017c7399e19e508ee32200a"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb26a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 18,
+          "comment" : 18,
+          "share" : 18
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"시작","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "허락받기",
+        "description" : "오늘은 6주년을 축하하는 의미로\n호캉스 진행 예정으로 부모님의\n허락이 필요합니다.\n\n엄마에게 허락을 받아주세요.\n\n성공 후 허락완료 버튼을 눌러주세요.\n\n※ 주의사항\n미션 실패시 이벤트 종료\n",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a"
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 1238,
+          "comment" : 8,
+          "share" : 780
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "허락완료",
+          "messageText" : "허락완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+2022-10-17 11:06:13.569  INFO 1710 --- [       Thread-3] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@27abe2cd: startup date [Sun Oct 16 14:02:16 UTC 2022]; root of context hierarchy
+2022-10-17 11:06:13.576  INFO 1710 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2022-10-17 11:06:13.577  INFO 1710 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2022-10-17 11:06:13.581  INFO 1710 --- [       Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-17 11:06:13.588  INFO 1710 --- [       Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-17 11:06:13.597  INFO 1710 --- [       Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.1.RELEASE)
+
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.0.1.RELEASE)
+
+2022-10-24 13:57:47.314  INFO 53557 --- [           main] project.Application                      : Starting Application on goorm with PID 53557 (/workspace/notice/build/libs/notice-0.0.1.jar started by root in /root)
+2022-10-24 13:57:47.388  INFO 53557 --- [           main] project.Application                      : No active profile set, falling back to default profiles: default
+2022-10-24 13:57:47.982  INFO 53557 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@60215eee: startup date [Mon Oct 24 13:57:47 UTC 2022]; root of context hierarchy
+2022-10-24 13:57:48.181  INFO 53558 --- [           main] project.Application                      : Starting Application on goorm with PID 53558 (/workspace/notice/build/libs/notice-0.0.1.jar started by root in /root)
+2022-10-24 13:57:48.189  INFO 53558 --- [           main] project.Application                      : No active profile set, falling back to default profiles: default
+2022-10-24 13:57:49.110  INFO 53558 --- [           main] ConfigServletWebServerApplicationContext : Refreshing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6fdb1f78: startup date [Mon Oct 24 13:57:49 UTC 2022]; root of context hierarchy
+2022-10-24 13:57:57.706  INFO 53557 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$7ccd565c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 13:57:58.422  INFO 53558 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$90f8c314] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-10-24 13:57:59.687  INFO 53557 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-24 13:57:59.894  INFO 53557 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-24 13:57:59.894  INFO 53557 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2022-10-24 13:57:59.917  INFO 53558 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-10-24 13:57:59.981  INFO 53557 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2022-10-24 13:58:00.024  INFO 53558 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-10-24 13:58:00.025  INFO 53558 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.29
+2022-10-24 13:58:00.077  INFO 53558 --- [ost-startStop-1] o.a.catalina.core.AprLifecycleListener   : The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [/usr/java/packages/lib/amd64:/usr/lib/x86_64-linux-gnu/jni:/lib/x86_64-linux-gnu:/usr/lib/x86_64-linux-gnu:/usr/lib/jni:/lib:/usr/lib]
+2022-10-24 13:58:00.399  INFO 53557 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-24 13:58:00.400  INFO 53557 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 12486 ms
+2022-10-24 13:58:00.408  INFO 53558 --- [ost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-10-24 13:58:00.408  INFO 53558 --- [ost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 11301 ms
+2022-10-24 13:58:01.103  INFO 53558 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2022-10-24 13:58:01.114  INFO 53558 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-10-24 13:58:01.115  INFO 53558 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-10-24 13:58:01.175  INFO 53558 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2022-10-24 13:58:01.175  INFO 53558 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2022-10-24 13:58:01.219  INFO 53557 --- [ost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Servlet dispatcherServlet mapped to [/]
+2022-10-24 13:58:01.226  INFO 53557 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2022-10-24 13:58:01.226  INFO 53557 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2022-10-24 13:58:01.226  INFO 53557 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2022-10-24 13:58:01.275  INFO 53557 --- [ost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2022-10-24 13:58:03.382  INFO 53558 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-24 13:58:03.389  INFO 53557 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-10-24 13:58:05.089  INFO 53558 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-24 13:58:05.099  INFO 53557 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-10-24 13:58:05.591  INFO 53558 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-10-24 13:58:05.612  INFO 53557 --- [           main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2022-10-24 13:58:05.756  INFO 53558 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-10-24 13:58:05.756  INFO 53557 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2022-10-24 13:58:06.385  INFO 53557 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2022-10-24 13:58:06.385  INFO 53558 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.2.16.Final}
+2022-10-24 13:58:06.391  INFO 53557 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-10-24 13:58:06.391  INFO 53558 --- [           main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2022-10-24 13:58:06.513  INFO 53557 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2022-10-24 13:58:06.516  INFO 53558 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2022-10-24 13:58:07.658  INFO 53557 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-10-24 13:58:07.661  INFO 53558 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2022-10-24 13:58:08.357  INFO 53558 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 13:58:08.361  INFO 53557 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-10-24 13:58:13.177  INFO 53557 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-10-24 13:58:13.190  INFO 53558 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-10-24 13:58:18.094  INFO 53557 --- [           main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@60215eee: startup date [Mon Oct 24 13:57:47 UTC 2022]; root of context hierarchy
+2022-10-24 13:58:18.390  WARN 53557 --- [           main] aWebConfiguration$JpaWebMvcConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-10-24 13:58:18.804  INFO 53557 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/telegram],methods=[POST]}" onto public project.dto.TelegramDTO project.controller.NoticeController.telegram_sendmsg(project.dto.TelegramDTO)
+2022-10-24 13:58:18.810  INFO 53557 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/slack],methods=[GET]}" onto public java.lang.String project.controller.NoticeController.slack_status()
+2022-10-24 13:58:18.813  INFO 53557 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/slack],methods=[POST]}" onto public project.dto.SlackDTO project.controller.NoticeController.slack_sendmsg(project.dto.SlackDTO)
+2022-10-24 13:58:18.814  INFO 53557 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/email],methods=[POST]}" onto public project.dto.SmtpDTO project.controller.NoticeController.smtp_sendmsg(project.dto.SmtpDTO)
+2022-10-24 13:58:18.819  INFO 53557 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/kkoChat/v1],methods=[POST || GET],produces=[application/json]}" onto public java.lang.String project.controller.NoticeController.callAPI(java.util.Map<java.lang.String, java.lang.Object>,javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2022-10-24 13:58:18.821  INFO 53557 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/view],methods=[GET]}" onto public java.lang.String project.controller.NoticeController.test2()
+2022-10-24 13:58:18.823  INFO 53557 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/v1/telegram],methods=[GET]}" onto public java.lang.String project.controller.NoticeController.telegram_status()
+2022-10-24 13:58:18.875  INFO 53557 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/],methods=[GET]}" onto public java.lang.String project.controller.NoticeController.test()
+2022-10-24 13:58:18.893  INFO 53557 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2022-10-24 13:58:18.895  INFO 53557 --- [           main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.servlet.error.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2022-10-24 13:58:19.106  INFO 53557 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-10-24 13:58:19.106  INFO 53557 --- [           main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2022-10-24 13:58:19.521  INFO 53557 --- [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2022-10-24 13:58:21.500  INFO 53557 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2022-10-24 13:58:21.503  INFO 53557 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Bean with name 'dataSource' has been autodetected for JMX exposure
+2022-10-24 13:58:21.521  INFO 53557 --- [           main] o.s.j.e.a.AnnotationMBeanExporter        : Located MBean 'dataSource': registering with JMX server as MBean [com.zaxxer.hikari:name=dataSource,type=HikariDataSource]
+2022-10-24 13:58:21.777  INFO 53557 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-10-24 13:58:21.823  INFO 53557 --- [           main] project.Application                      : Started Application in 36.794 seconds (JVM running for 38.974)
+스프링 버전 : 5.0.5.RELEASE
+2022-10-25 02:51:04.418  INFO 53557 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2022-10-25 02:51:04.418  INFO 53557 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2022-10-25 02:51:04.445  INFO 53557 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 27 ms
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"시작","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 1 : 엄마의 허락을 받아라!]",
+        "description" : "오늘은 준영 동주 커플의\n6주년 기념으로 호캉스\n데이트를 즐길 예정입니다.\n\n호캉스를 재미있게 진행하기\n위해 \"엄마\"의 허락을 받아주세요.\n\n엄마의 허락을 받았다면\n\"허락완료\" 버튼을 눌러주세요.\n\n※ 주의사항\n미션 실패시 이벤트 종료",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 1238,
+          "comment" : 8,
+          "share" : 780
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "허락완료",
+          "messageText" : "허락완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"시작","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 1 : 엄마의 허락을 받아라!]",
+        "description" : "오늘은 준영 동주 커플의\n6주년 기념으로 호캉스\n데이트를 즐길 예정입니다.\n\n호캉스를 재미있게 진행하기\n위해 \"엄마\"의 허락을 받아주세요.\n\n엄마의 허락을 받았다면\n\"허락완료\" 버튼을 눌러주세요.\n\n※ 주의사항\n미션 실패시 이벤트 종료",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 1238,
+          "comment" : 8,
+          "share" : 780
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "허락완료",
+          "messageText" : "허락완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"시작","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 1 : 엄마의 허락을 받아라!]",
+        "description" : "오늘은 준영 동주 커플의\n6주년 기념으로 호캉스\n데이트를 즐길 예정입니다.\n\n호캉스를 재미있게 진행하기\n위해 \"엄마\"의 허락을 받아주세요.\n\n엄마의 허락을 받았다면\n\"허락완료\" 버튼을 눌러주세요.\n\n※ 주의사항\n미션 실패시 이벤트 종료",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 1238,
+          "comment" : 8,
+          "share" : 780
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "허락완료",
+          "messageText" : "허락완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"허락완료","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 2 : 호캉스 준비를 진행하라!]",
+        "description" : "갑작스러운 호캉스 진행으로\n동주의 준비가 필요합니다.\n\n30분 안으로 호캉스 출발\n준비를 모두 완비하세요.\n\n준비가 완료되었다면\n\"준비완료\" 버튼을 눌러주세요.\n\n※ 주의사항\n시간 초과시 맛없는 저녁으로 변경",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de339e41ce89b663315d96faecd7cfd11b",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb10a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 2,
+          "comment" : 2,
+          "share" : 2
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "준비완료",
+          "messageText" : "준비완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"준비완료","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 3 : 석계역으로 이동하라!]",
+        "description" : "지금부터는 호캉스의 위치를\n알아내기 위한 미션 진행하겠습니다.\n\n준비가 완료되었다고 생각하고\n호캉스를 위해 버스정류장으로\n이동하여 석계역 6호선 2,3번\n출구로 이동해주세요.\n\n버스정류장에 도착하였다면\n\"위치확인\" 버튼을 눌러주세요.\n\n※ 주의사항\n시간 초과시 맛없는 저녁으로 변경",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de9cbcbe2de7f4969efc79ab353e0c19e8",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb11a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 3,
+          "comment" : 3,
+          "share" : 3
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "위치확인",
+          "messageText" : "위치확인",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"위치확인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 4 : 물품보관함을 열어라!]",
+        "description" : "6호선 석계역 물품보관함에는\n호캉스에 필요한 아이템이\n숨겨져 있습니다.\n\n숨겨진 아이템을 구하기 위해\n퀴즈를 통해 사물함 번호와\n비밀번호를 알아내보세요.\n\n준비가 되었다면\n\"문제확인\" 버튼을 눌러주세요.\n\n※ 주의사항\n환승을 위해서는 버스를 이용하세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTRfMTQg/MDAxNjY1NzQ5MzgyMjI0.aLUILeB0CG0oO5VG2MOKCH_gQAf3Td9ucpKvUHiDVt0g.EYfbKFksZA8QBjve7uKHLwQnma15NtgX0k6ji_Y6z_Eg.PNG/%EC%84%9D%EA%B3%84%EC%97%AD.PNG?type=m250_375",
+          "link" : null,
+          "fixedRatio" : false,
+          "width" : 800,
+          "height" : 400
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb12a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 4,
+          "comment" : 4,
+          "share" : 4
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "문제확인",
+          "messageText" : "문제확인",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"문제확인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Quiz 1 : 패스워드를 풀어라!]",
+        "description" : "소중한 노트북이 잠겨있습니다.\n노트북 비밀번호 확인하기 위해서는\n이미지를 통해서 비밀번호 유추하세요.\n\n답을 알았다면 \n채팅으로 \"답\"을 입력해주세요.\n\n※ 주의사항\n도저히 답이 떠오리지 않으면\n\"힌트\" 버튼을 눌러주세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTRfNzAg/MDAxNjY1NzQ5MjMzNTgx.Xrg2L3wEtga_VO9OXZS7rvWH4uQTHH8vueqJHawm6Kog.OeP2tpaOkyv9IB7Qcq_aoEbqgHEQhwzrhlUQg0frCU0g.PNG/%EB%AC%B8%EC%A0%9C1.png?type=m250_375",
+          "link" : null,
+          "fixedRatio" : false,
+          "width" : 800,
+          "height" : 400
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb13a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 5,
+          "comment" : 5,
+          "share" : 5
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "힌트",
+          "messageText" : "노트북힌트",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"노트북힌트","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Chance : 노트북 힌트]",
+        "description" : "힌트는 키보드의 키패드입니다.\n키패드의 여백과 문제의 이미지를\n대조하면 번호를 유추 할 수 있습니다.\n비밀번호를 찾아보세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTZfMTEy/MDAxNjY1ODkyMDY2Mjgw.dFm-X4TEuaNt-BTLqZwyM5n_GQ36T_GaJzSItNx8fCkg.6eBZU2AphpTychNNjfqDn7I7dwhu7nALuSTto_hwhU0g.PNG/%ED%9E%8C%ED%8A%B81.png?type=m250_375",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb14a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 6,
+          "comment" : 6,
+          "share" : 6
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"ㅈ미자","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+SimpleText Make Start
+SimpleText Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "simpleText" : {
+        "Text" : "오답 또는 인식 할 수 없는 단어입니다.\n다시 한번 생각해보세요.",
+        "text" : "오답 또는 인식 할 수 없는 단어입니다.\n다시 한번 생각해보세요."
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"시작","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 1 : 엄마의 허락을 받아라!]",
+        "description" : "오늘은 준영 동주 커플의\n6주년 기념으로 호캉스\n데이트를 즐길 예정입니다.\n\n호캉스를 재미있게 진행하기\n위해 \"엄마\"의 허락을 받아주세요.\n\n엄마의 허락을 받았다면\n\"허락완료\" 버튼을 눌러주세요.\n\n※ 주의사항\n미션 실패시 이벤트 종료",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 1238,
+          "comment" : 8,
+          "share" : 780
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "허락완료",
+          "messageText" : "허락완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"허락완료","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 2 : 호캉스 준비를 진행하라!]",
+        "description" : "갑작스러운 호캉스 진행으로\n동주의 준비가 필요합니다.\n\n30분 안으로 호캉스 출발\n준비를 모두 완비하세요.\n\n준비가 완료되었다면\n\"준비완료\" 버튼을 눌러주세요.\n\n※ 주의사항\n시간 초과시 맛없는 저녁으로 변경",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de339e41ce89b663315d96faecd7cfd11b",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb10a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 2,
+          "comment" : 2,
+          "share" : 2
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "준비완료",
+          "messageText" : "준비완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"시작","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 1 : 엄마의 허락을 받아라!]",
+        "description" : "오늘은 준영 동주 커플의\n6주년 기념으로 호캉스\n데이트를 즐길 예정입니다.\n\n호캉스를 재미있게 진행하기\n위해 \"엄마\"의 허락을 받아주세요.\n\n엄마의 허락을 받았다면\n\"허락완료\" 버튼을 눌러주세요.\n\n※ 주의사항\n미션 실패시 이벤트 종료",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 1238,
+          "comment" : 8,
+          "share" : 780
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "허락완료",
+          "messageText" : "허락완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"시작","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 1 : 엄마의 허락을 받아라!]",
+        "description" : "오늘은 준영 동주 커플의\n6주년 기념으로 호캉스\n데이트를 즐길 예정입니다.\n\n호캉스를 재미있게 진행하기\n위해 \"엄마\"의 허락을 받아주세요.\n\n엄마의 허락을 받았다면\n\"허락완료\" 버튼을 눌러주세요.\n\n※ 주의사항\n미션 실패시 이벤트 종료",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb9a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 1238,
+          "comment" : 8,
+          "share" : 780
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "허락완료",
+          "messageText" : "허락완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"허락완료","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 2 : 호캉스 준비를 진행하라!]",
+        "description" : "갑작스러운 호캉스 진행으로\n동주의 준비가 필요합니다.\n\n30분 안으로 호캉스 출발\n준비를 모두 완비하세요.\n\n준비가 완료되었다면\n\"준비완료\" 버튼을 눌러주세요.\n\n※ 주의사항\n시간 초과시 맛없는 저녁으로 변경",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de339e41ce89b663315d96faecd7cfd11b",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb10a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 2,
+          "comment" : 2,
+          "share" : 2
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "준비완료",
+          "messageText" : "준비완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"준비완료","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 3 : 석계역으로 이동하라!]",
+        "description" : "지금부터는 호캉스의 위치를\n알아내기 위한 미션 진행하겠습니다.\n\n준비가 완료되었다고 생각하고\n호캉스를 위해 버스정류장으로\n이동하여 석계역 6호선 2,3번\n출구로 이동해주세요.\n\n버스정류장에 도착하였다면\n\"위치확인\" 버튼을 눌러주세요.\n\n※ 주의사항\n시간 초과시 맛없는 저녁으로 변경",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de9cbcbe2de7f4969efc79ab353e0c19e8",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb11a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 3,
+          "comment" : 3,
+          "share" : 3
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "위치확인",
+          "messageText" : "위치확인",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"위치확인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 4 : 물품보관함을 열어라!]",
+        "description" : "6호선 석계역 물품보관함에는\n호캉스에 필요한 아이템이\n숨겨져 있습니다.\n\n숨겨진 아이템을 구하기 위해\n퀴즈를 통해 사물함 번호와\n비밀번호를 알아내보세요.\n\n준비가 되었다면\n\"문제확인\" 버튼을 눌러주세요.\n\n※ 주의사항\n환승을 위해서는 버스를 이용하세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTRfMTQg/MDAxNjY1NzQ5MzgyMjI0.aLUILeB0CG0oO5VG2MOKCH_gQAf3Td9ucpKvUHiDVt0g.EYfbKFksZA8QBjve7uKHLwQnma15NtgX0k6ji_Y6z_Eg.PNG/%EC%84%9D%EA%B3%84%EC%97%AD.PNG?type=m250_375",
+          "link" : null,
+          "fixedRatio" : false,
+          "width" : 800,
+          "height" : 400
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb12a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 4,
+          "comment" : 4,
+          "share" : 4
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "문제확인",
+          "messageText" : "문제확인",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"문제확인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Quiz 1 : 패스워드를 풀어라!]",
+        "description" : "소중한 노트북이 잠겨있습니다.\n노트북 비밀번호 확인하기 위해서는\n이미지를 통해서 비밀번호 유추하세요.\n\n답을 알았다면 \n채팅으로 \"답\"을 입력해주세요.\n\n※ 주의사항\n도저히 답이 떠오리지 않으면\n\"힌트\" 버튼을 눌러주세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTRfNzAg/MDAxNjY1NzQ5MjMzNTgx.Xrg2L3wEtga_VO9OXZS7rvWH4uQTHH8vueqJHawm6Kog.OeP2tpaOkyv9IB7Qcq_aoEbqgHEQhwzrhlUQg0frCU0g.PNG/%EB%AC%B8%EC%A0%9C1.png?type=m250_375",
+          "link" : null,
+          "fixedRatio" : false,
+          "width" : 800,
+          "height" : 400
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb13a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 5,
+          "comment" : 5,
+          "share" : 5
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "힌트",
+          "messageText" : "노트북힌트",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"161112","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Clear : 정답]",
+        "description" : "정답입니다!\n물품보관함의 위치는 111번\n패스워드는 222222입니다.\n\n패스워드를 입력하여 물건을\n획득하고 다음 진행을 위해\n버튼을 누르세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de41d1a2caccd0c566eab28b91e2e5d306",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb15a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 7,
+          "comment" : 7,
+          "share" : 7
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "물건획득",
+          "messageText" : "물건획득",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"물건획득","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 6 : 지하철을 탑승하라!]",
+        "description" : "다음 미션을 진행하기 위해서\n1호선 하행 지하철을 탑승하세요.\n\n탑승을 완료하였다면,\n이제는 목적지를 알아야겠죠 ?\n\n목적지도 쉽게 알려주지 않습니다.\n목적지를 알아내기 위한 퀴즈를\n해결하기 위해 \"목적지확인\"\n버튼을 누르세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de8f324a0b9c48f77dbce3a43bd11ce785",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb16a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 8,
+          "comment" : 8,
+          "share" : 8
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "목적지확인",
+          "messageText" : "목적지확인",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"목적지확인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Quiz 2 : 목적지를 찾아라!]",
+        "description" : "이번 퀴즈는 추억을 상기하라\n과거의 경험을 생각해보고\n퀴즈의 답을 입력하세요.\n\n여의도에서 매년 큰 축제를\n진행하고 있습니다.\n올해 축제를 보러가기 위해\n내린 역의 이름은 무엇인가요 ?\n\n힌트 : 3년만에 진행하였고\n10월 8일날 축제를 보았습니다.\n\n정답을 못찾으시겠다면,\n광운대부터 차례로 입력을…\n\n※ 주의사항\n도저히 답을 모르겠다면\n\"힌트\" 버튼을 눌러주세요.\n(역은 생략 석계역인 경우 석계)",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de00df9b2a481d32ec42ae698738782a76",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb17a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 9,
+          "comment" : 9,
+          "share" : 9
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"목적지확인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Quiz 2 : 목적지를 찾아라!]",
+        "description" : "이번 퀴즈는 추억을 상기하라\n과거의 경험을 생각해보고\n퀴즈의 답을 입력하세요.\n\n여의도에서 매년 큰 축제를\n진행하고 있습니다.\n올해 축제를 보러가기 위해\n내린 역의 이름은 무엇인가요 ?\n\n힌트 : 3년만에 진행하였고\n10월 8일날 축제를 보았습니다.\n\n정답을 못찾으시겠다면,\n광운대부터 차례로 입력을…\n\n※ 주의사항\n도저히 답을 모르겠다면\n\"힌트\" 버튼을 눌러주세요.\n(역은 생략 석계역인 경우 석계)",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de00df9b2a481d32ec42ae698738782a76",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb17a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 9,
+          "comment" : 9,
+          "share" : 9
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"용산","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Clear : 정답]",
+        "description" : "\"정답\"입니다!\n목적지에 도착하기 전까지\n잠시 쉬는시간을 갖도록하세요.\n\n목적지를 도착하였다면\n\"목적지도착\" 버튼을 누르세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418deb3a18fdf58bc66ec3f4b6084b7d0b570",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb18a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 10,
+          "comment" : 10,
+          "share" : 10
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "목적지도착",
+          "messageText" : "목적지도착",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"목적지도착","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Quiz 3 : 물건을 맞춰라!]",
+        "description" : "여기까지 오다니 정말 대단해요!\n\n이번 퀴즈는 호캉스를 재밌게\n즐기기 위한 물건을 유추하고\n정답을 입력해주세요.\n\n정답을 유추하기 위한 단어\n1. 조양마트\n2. 광명동굴\n3. 형제조각",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de7e6f47a71c79378b48860ead6a12bf11",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb19a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 11,
+          "comment" : 11,
+          "share" : 11
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"와인","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Clear : 정답]",
+        "description" : "\"정답\"입니다!\n석계역 물품보관함에서\n획득 한 카드를 이용하여\n와인을 구매해주세요.\n\n용산역 와인판매점 리스트\n1. 용산역 지하 이마트\n2. 용산역 건너편 오비노미오\n3. 용산역 건너편 와인마트\n\n가까운 순서대로 나열하였습니다.\n좋아하는 와인을 선택하고 난 후\n\"구매완료\" 버튼을 눌르세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de71b950f0a05bd8dba8b11dbe535ebe4b",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb20a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 12,
+          "comment" : 12,
+          "share" : 12
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "구매완료",
+          "messageText" : "구매완료",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"구매완료","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 7 : 열쇠를 획득하라!]",
+        "description" : "드디어 마지막 문제입니다!\n마지막 문제는 호캉스를\n입장하기 위해 장소와 열쇠를\n획득하기 위해 문제를 맞추고\n\n열쇠를 획득해보세요.\n열쇠의 위치를 보기 위해서\n\"열쇠위치\"버튼을 누르세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418de00df9b2a481d32ec42ae698738782a76",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb21a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 13,
+          "comment" : 13,
+          "share" : 13
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "열쇠위치",
+          "messageText" : "열쇠위치",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"열쇠위치","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission 8 : 퀴즈를 해결하라!]",
+        "description" : "열쇠의 위치는 용산역\n2번 출구 물품보관함입니다.\n\n물품보관함을 열기 위해서는\n퀴즈를 해결해야 합니다.\n\n퀴즈를 확인하기 위해서\n\"퀴즈\" 버튼을 누르세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTRfMjYw/MDAxNjY1NzQ5NjA1MzI3.hxrwJSZeUkvOrnwout_dt-ZoJncSYz0FNFtXzeyf_wYg.XBchhZbS-QBY7cG4DNbUeHSxwdOjpWm-_ngWGYvh68Ag.PNG/%EC%9A%A9%EC%82%B0%EC%97%AD.PNG?type=m250_375",
+          "link" : null,
+          "fixedRatio" : false,
+          "width" : 800,
+          "height" : 400
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb22a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 14,
+          "comment" : 14,
+          "share" : 14
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "퀴즈",
+          "messageText" : "용산역퀴즈",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"용산역퀴즈","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Quiz 4 : 색을 맞춰라!]",
+        "description" : "마지막 퀴즈입니다!\n위 이미지를 보고 2022년의\n색은 무엇인지 맞춰보세요.\n\n퀴즈의 정답을 알아냈다면\n정답을 입력해주세요.\n\n※ 주의사항\n도저히 답을 모르겠다면\n\"힌트\" 버튼을 눌러주세요.\n(정답은 색까지 입력 예시 빨강색)",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTRfMTAz/MDAxNjY1NzQ5MjQ5Mjg1.bqj8nZZc_2dNLfk4d_A4zr50bWO9bsJidbbWmX3-y90g.6mqrn2op0RAGXT0KO4TCi4nw12TtbCUQTidBPaucI48g.PNG/%EB%AC%B8%EC%A0%9C2.png?type=m250_375",
+          "link" : null,
+          "fixedRatio" : false,
+          "width" : 800,
+          "height" : 400
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb23a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 15,
+          "comment" : 15,
+          "share" : 15
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "힌트",
+          "messageText" : "용산역힌트",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"용산역힌트","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Change : 무슨색 일까요?]",
+        "description" : "문제를 자세히 살펴보면\n모든 년도를 도화지에 썼는데\n왜 안보이는 걸까요 ?\n\n힌트로는 해리포터의 망토입니다.\nOO색은 누구의 눈에도\n보이지 않는 것으로 알려졌죠!\n\n안보이는 색은 과연 ??!\n(빨간색인경우 빨간색 모두 입력)",
+        "thumbnail" : {
+          "imageUrl" : "https://g-cbox.pstatic.net/MjAyMjEwMTZfMTcy/MDAxNjY1ODkyMDczNTUx.SPn-PfOGAuzwzEShNlbXtMmkWKYPVzN1Zbho4DaJgjAg.EsEI5VKcXgmCXAQiKdyUtQiWMF_F9gyMarIlUb0vaIIg.PNG/%ED%9E%8C%ED%8A%B82.png?type=m250_375",
+          "link" : null,
+          "fixedRatio" : false,
+          "width" : 800,
+          "height" : 400
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb24a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 16,
+          "comment" : 16,
+          "share" : 16
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"투명색","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Clear : 정답]",
+        "description" : "정답입니다!\n물품보관함의 위치는 222번\n패스워드는 666666입니다.\n\n패스워드를 입력하여 물건을\n획득하고 다음 진행을 위해\n버튼을 누르세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418deb3a18fdf58bc66ec3f4b6084b7d0b570",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb25a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 17,
+          "comment" : 17,
+          "share" : 17
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "미션클리어",
+          "messageText" : "미션클리어",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"투명색","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Clear : 정답]",
+        "description" : "정답입니다!\n물품보관함의 위치는 222번\n패스워드는 666666입니다.\n\n패스워드를 입력하여 물건을\n획득하고 다음 진행을 위해\n버튼을 누르세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418deb3a18fdf58bc66ec3f4b6084b7d0b570",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb25a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 17,
+          "comment" : 17,
+          "share" : 17
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "미션클리어",
+          "messageText" : "미션클리어",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"투명","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+SimpleText Make Start
+SimpleText Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "simpleText" : {
+        "Text" : "오답 또는 인식 할 수 없는 단어입니다.\n다시 한번 생각해보세요.",
+        "text" : "오답 또는 인식 할 수 없는 단어입니다.\n다시 한번 생각해보세요."
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"투명색","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Clear : 정답]",
+        "description" : "정답입니다!\n물품보관함의 위치는 222번\n패스워드는 666666입니다.\n\n패스워드를 입력하여 물건을\n획득하고 다음 진행을 위해\n버튼을 누르세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418deb3a18fdf58bc66ec3f4b6084b7d0b570",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb25a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 17,
+          "comment" : 17,
+          "share" : 17
+        },
+        "buttons" : [ {
+          "action" : "message",
+          "label" : "미션클리어",
+          "messageText" : "미션클리어",
+          "webLinkUrl" : "messageText"
+        } ]
+      }
+    } ]
+  }
+}
+callAPI End
+callAPI Start
+RecvMsg Start
+{"bot":{"id":"633c132b2de9cf2306db86c8","name":"빵빵덕"},"intent":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록","extra":{"reason":{"code":1,"message":"OK"}}},"action":{"id":"633c183aca1fd2777db9776d","name":"스킬테스트","params":{},"detailParams":{},"clientExtra":{}},"userRequest":{"block":{"id":"633c132b2de9cf2306db86cc","name":"폴백 블록"},"user":{"id":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","type":"botUserKey","properties":{"botUserKey":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","isFriend":true,"plusfriendUserKey":"dMjB_fBpTbsb","bot_user_key":"864b1c517efaab0e8e2e3af0413bed1aff534a7223721eb0aa7a058d0652451a16","plusfriend_user_key":"dMjB_fBpTbsb"}},"utterance":"미션클리어","params":{"surface":"Kakaotalk.plusfriend"},"lang":"ko","timezone":"Asia/Seoul"},"contexts":[]}
+SendMsg Start
+BasicCard Make Start
+BasicCard Make End
+POST TELEGRAM SEND MESSAGE START
+Bot_cnt : 0
+Chat_id : 
+Apikey : 
+POST TELEGRAM SEND MESSAGE END
+SendMsg End
+{
+  "version" : "2.0",
+  "template" : {
+    "outputs" : [ {
+      "basicCard" : {
+        "title" : "[Mission Success]",
+        "description" : "최종 목적지의 위치는\n노보텔 스위트 앰배서더\n서울 용산 5성급 호텔입니다.\n\n방 번호 100으로 이동해주세요.\n\n지금까지 6주년 이벤트 담당자\n동주와 닮은 빵빵덕이였습니다.\n이벤트를 참가해준 동주님께\n진심으로 감사드리고,\n행복한 6주년 보내세요.",
+        "thumbnail" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418defba8e3d30017c7399e19e508ee32200a",
+          "link" : null,
+          "fixedRatio" : true,
+          "width" : 800,
+          "height" : 800
+        },
+        "profile" : {
+          "imageUrl" : "https://item.kakaocdn.net/do/8c7ad37f8546741e675d569d038418def604e7b0e6900f9ac53a43965300eb26a",
+          "nickname" : "빵빵덕"
+        },
+        "social" : {
+          "like" : 18,
+          "comment" : 18,
+          "share" : 18
+        },
+        "buttons" : [ ]
+      }
+    } ]
+  }
+}
+callAPI End
+2022-10-26 12:23:53.762  INFO 53557 --- [       Thread-3] ConfigServletWebServerApplicationContext : Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@60215eee: startup date [Mon Oct 24 13:57:47 UTC 2022]; root of context hierarchy
+2022-10-26 12:23:53.766  INFO 53557 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2022-10-26 12:23:53.768  INFO 53557 --- [       Thread-3] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans
+2022-10-26 12:23:53.770  INFO 53557 --- [       Thread-3] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-10-26 12:23:53.771  INFO 53557 --- [       Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-10-26 12:23:53.796  INFO 53557 --- [       Thread-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -43,7 +43,7 @@ public class SlackService implements NoticeServiceInterface {
     
             HttpEntity<Map<String,Object>> entity = new HttpEntity<Map<String,Object>>(request);
         	// Webhook URL
-            String url = "https://hooks.slack.com/services/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";; 
+            String url = "https://hooks.slack.com/services/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";
     
             restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
             
